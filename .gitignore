@@ -1,0 +1,5 @@
+*.xcbkptlist
+*.DS_Store
+xcschememanagement.plist
+TwitterReader.xcscheme
+UserInterfaceState.xcuserstate

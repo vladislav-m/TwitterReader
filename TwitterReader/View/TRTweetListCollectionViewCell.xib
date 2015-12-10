@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TRTweetListCollectionViewCell" id="1WA-a7-Cq9" customClass="TRTweetListCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ezD-Al-zlC">
+                        <rect key="frame" x="8" y="8" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="qyF-3L-SCO"/>
+                            <constraint firstAttribute="height" constant="70" id="vfe-FB-RuB"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4Z-sv-BCS">
+                        <rect key="frame" x="83" y="8" width="51" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3g-2R-iGc">
+                        <rect key="frame" x="83" y="31" width="80" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="900" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE2-ON-JlD">
+                        <rect key="frame" x="326" y="8" width="36" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="63" id="Jrs-tJ-Aq5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jrs-tJ-Aq5"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="opv-Sd-wmV">
+                        <rect key="frame" x="83" y="78" width="279" height="0.0"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" id="DMN-QM-WSv"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="0.20768784291239428" green="0.76078431372549016" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="n4Z-sv-BCS" firstAttribute="leading" secondItem="ezD-Al-zlC" secondAttribute="trailing" constant="5" id="4VT-fP-dYh"/>
+                <constraint firstItem="opv-Sd-wmV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="c3g-2R-iGc" secondAttribute="bottom" constant="4" id="4zH-HG-Wdx"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c3g-2R-iGc" secondAttribute="trailing" constant="8" id="6Hx-I4-10Y"/>
+                <constraint firstItem="gE2-ON-JlD" firstAttribute="trailing" secondItem="opv-Sd-wmV" secondAttribute="trailing" id="9wc-BU-ZOL"/>
+                <constraint firstItem="opv-Sd-wmV" firstAttribute="leading" secondItem="c3g-2R-iGc" secondAttribute="leading" id="Mnd-BE-2qQ"/>
+                <constraint firstItem="c3g-2R-iGc" firstAttribute="top" secondItem="n4Z-sv-BCS" secondAttribute="bottom" constant="5" id="NIj-Ur-mWE"/>
+                <constraint firstItem="ezD-Al-zlC" firstAttribute="top" secondItem="1WA-a7-Cq9" secondAttribute="top" constant="8" id="RO1-lC-nzj"/>
+                <constraint firstItem="gE2-ON-JlD" firstAttribute="top" secondItem="1WA-a7-Cq9" secondAttribute="top" constant="8" id="SMT-tQ-6ZB"/>
+                <constraint firstItem="gE2-ON-JlD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n4Z-sv-BCS" secondAttribute="trailing" constant="4" id="T14-8c-G1T"/>
+                <constraint firstItem="c3g-2R-iGc" firstAttribute="leading" secondItem="n4Z-sv-BCS" secondAttribute="leading" id="Zlb-kZ-OXw"/>
+                <constraint firstItem="ezD-Al-zlC" firstAttribute="leading" secondItem="1WA-a7-Cq9" secondAttribute="leading" constant="8" id="fV5-KM-K49"/>
+                <constraint firstAttribute="trailing" secondItem="gE2-ON-JlD" secondAttribute="trailing" constant="8" id="knl-sp-zeq"/>
+                <constraint firstAttribute="bottom" secondItem="opv-Sd-wmV" secondAttribute="bottom" constant="8" id="ofs-Sq-8F2"/>
+                <constraint firstItem="n4Z-sv-BCS" firstAttribute="top" secondItem="1WA-a7-Cq9" secondAttribute="top" constant="8" id="ohM-cJ-uy5"/>
+            </constraints>
+            <size key="customSize" width="370" height="86"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="3"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="authorAvatarImageView" destination="ezD-Al-zlC" id="kbu-7l-ayk"/>
+                <outlet property="authorLabelTopConstraint" destination="ohM-cJ-uy5" id="p7G-6v-dWw"/>
+                <outlet property="authorLabelTrailingConstraint" destination="T14-8c-G1T" id="Dqa-3r-OV0"/>
+                <outlet property="authorNameLabel" destination="n4Z-sv-BCS" id="sAq-q1-Pcv"/>
+                <outlet property="dateLabel" destination="gE2-ON-JlD" id="maE-Yu-pNT"/>
+                <outlet property="dateLabelTrailingConstraint" destination="knl-sp-zeq" id="Ktc-7K-rFJ"/>
+                <outlet property="textLabelBottomConstraint" destination="4zH-HG-Wdx" id="P7x-ky-2FY"/>
+                <outlet property="textLabelTopConstraint" destination="NIj-Ur-mWE" id="WZ8-ai-uEf"/>
+                <outlet property="textLabelTrailingConstraint" destination="6Hx-I4-10Y" id="KgH-f7-a5Z"/>
+                <outlet property="tweetImageView" destination="opv-Sd-wmV" id="WFi-cn-OVT"/>
+                <outlet property="tweetImageViewBottomConstraint" destination="ofs-Sq-8F2" id="p6i-ir-uCh"/>
+                <outlet property="tweetImageViewHeightConstraint" destination="DMN-QM-WSv" id="zjK-7R-ixk"/>
+                <outlet property="tweetTextLabel" destination="c3g-2R-iGc" id="Ysg-W4-aRV"/>
+            </connections>
+            <point key="canvasLocation" x="611" y="144"/>
+        </collectionViewCell>
+    </objects>
+</document>
